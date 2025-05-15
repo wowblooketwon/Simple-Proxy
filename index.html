@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Proxy VPN</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #222; color: #eee; }
+    input { width: 80%; padding: 10px; font-size: 1.2em; }
+    button { padding: 10px 20px; font-size: 1.2em; margin-left: 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Simple Proxy VPN</h1>
+  <input type="text" id="urlInput" placeholder="Enter URL (e.g. https://roblox.com)" />
+  <button onclick="goProxy()">Go</button>
+
+  <script>
+    function goProxy() {
+      const url = document.getElementById('urlInput').value.trim();
+      if (!url) return alert('Enter a URL');
+      // Use a free proxy service like cors-anywhere or similar here
+      // For demo, we just open the URL directly
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
